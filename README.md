@@ -1,4 +1,4 @@
-#Linear Regression
+# Linear Regression
 
 When fist designing a learning algorithm you need to figure out how to represent the hypothesis **h**. In Linear Regression we can represent the hypothesis with the following equation:
 
@@ -32,4 +32,7 @@ Another option when using large datasets would be to use **stochastic** gradient
 $(\theta_j := \theta_j - \alpha(h(x^{(i)})-y^{(i)})*x_j^{(i)})_{(j=1...n)}$
 
 The flaw of this method is that it will never truly converge, leaving us with a less than optimal hypothesis equation. But this is the more common method just because of how slow batch Gradient Descent is in practice. Using stochastic and also decreasing the learning rate with each iteration also works well because it will bounce around a smaller area in the end, making for a more accurate result.
+
+## Implementing these concepts into python
+
 
