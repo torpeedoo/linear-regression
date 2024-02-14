@@ -82,4 +82,4 @@ new_params = stoch_gradient_descent(0.0002, x, y, 100, def_params)
 ```
 When we run this we get a set of images we can turn into an animation.
 
-![d](/rsr/LR_anim.mp4)
+![](/rsr/LR_anim.gif)
