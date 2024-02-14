@@ -6,7 +6,7 @@ $h(x) = \theta_0 + \theta_1x$
 
 The goal of our learning algorithm is to minimize our cost function. In this case it can be represented with this equation 
 
-$J(\theta) = \frac{1}{2} \sum _{i=1}^m (h(x^{(i)}) - y^{(i)})^2$
+$$J(\theta) = \frac{1}{2} \sum _{i=1}^m (h(x^{(i)}) - y^{(i)})^2$$
 
 This equation represents the sum of all the predicted values $h(x)$ minus the actual values $y$ in the entire dataset. We can then change theta to reduce the output of the function. The half constant is only to make the math easier down the line. 
 
