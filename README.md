@@ -18,21 +18,18 @@ To optimize the loss function we want to change our theta values so that the los
 ![](/rsr/GD.PNG)
  
 We can formally define our gradient descent function as follows:
-$$
-(\theta_j := \theta_j - \alpha \sum_{i=1}^m (h(x^{(i)})-y^{(i)})*x_j^{(i)})_{(j=1...n)}
-$$
+
+$(\theta_j := \theta_j - \alpha \sum_{i=1}^m (h(x^{(i)})-y^{(i)})*x_j^{(i)})_{(j=1...n)}$
+
 where $(h(x)-y)*x_j$ is the partial derivative of $J(\theta)$ with respect to $\theta_j$. we repeat this update of $\theta_j$ until convergence.
 
 **If our learning rate $\alpha$ is too large me may overshoot the minimum. On the other hand if it is too small it will be very slow.**
 
-**Convergence**: our function approaches a limit
-
 This is known as **batch** gradient descent which is great in the case of smaller data sets but falls short when used with large data sets.
 
 Another option when using large datasets would be to use **stochastic** gradient descent which instead of iterating over the loss function for all the elements in the set we instead only use one example and iterate over that example each step in the process. which would give us the following equation:
-$$
-(\theta_j := \theta_j - \alpha(h(x^{(i)})-y^{(i)})*x_j^{(i)})_{(j=1...n)}
-$$
+
+$(\theta_j := \theta_j - \alpha(h(x^{(i)})-y^{(i)})*x_j^{(i)})_{(j=1...n)}$
+
 The flaw of this method is that it will never truly converge, leaving us with a less than optimal hypothesis equation. But this is the more common method just because of how slow batch Gradient Descent is in practice. Using stochastic and also decreasing the learning rate with each iteration also works well because it will bounce around a smaller area in the end, making for a more accurate result.
 
-![[LR_anim.mp4]]
