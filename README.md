@@ -1,6 +1,6 @@
 # Linear Regression
 
-When fist designing a learning algorithm you need to figure out how to represent the hypothesis **h**. In Linear Regression we can represent the hypothesis with the following equation:
+Linear regression is the process of mapping a linear funciton to a dataset; by doing this we can predict unknown values with a good ammount of accuracy. When fist designing our learning algorithm we need to figure out how to represent the hypothesis **h**, which is the prediction function. In Linear Regression we can represent the hypothesis with the following equation:
 
 $$h(x) = \theta_0 + \theta_1x$$
 
@@ -35,4 +35,14 @@ The flaw of this method is that it will never truly converge, leaving us with a 
 
 ## Implementing these concepts into python
 
-
+The first step I took when implementing these principles into python was to define a function holding our hypothesis equation.
+```python
+def hypothesis_equation(input, params):
+    if type(input) == "list":
+        outputs = []
+        for i in input:
+            outputs.append(params[0] + params[1]*input)
+        return outputs
+    else:
+        return params[0] + params[1]*input
+```
