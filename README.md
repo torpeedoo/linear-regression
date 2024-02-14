@@ -69,7 +69,7 @@ def stoch_gradient_descent(learning_rate, x, y, iterations, params):
 
     return new_params
 ```
-Finally all we have to do is to run these function to train our algorithm.
+Finally, all we have to do is to run these function to train our algorithm.
 ```python
 data = make_data(100, 1, 1, 20, True, np.random.randint(1, 100))
 x = data[0]
@@ -82,4 +82,4 @@ new_params = stoch_gradient_descent(0.0002, x, y, 100, def_params)
 ```
 When we run this we get a set of images we can turn into an animation.
 
-![](/rsr/LR_anim.mp4)
+![d](/rsr/LR_anim.mp4)
