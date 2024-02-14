@@ -47,7 +47,7 @@ def hypothesis_equation(input, params):
         return params[0] + params[1]*input
 ```
 
-My next step was to define my gradient descent function. This includes code to plot the new parameters so we can make an animation later.
+My next step was to define my gradient descent function. This includes code to plot the hypothesis function with the new parameters so we can make an animation later.
 ```python
 def stoch_gradient_descent(learning_rate, x, y, iterations, params):
     new_params = params
