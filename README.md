@@ -46,3 +46,40 @@ def hypothesis_equation(input, params):
     else:
         return params[0] + params[1]*input
 ```
+
+My next step was to define my gradient descent function. This includes code to plot the new parameters so we can make an animation later.
+```python
+def stoch_gradient_descent(learning_rate, x, y, iterations, params):
+    new_params = params
+    total_its = 0
+
+    #loop through each feature
+    for p in range(0, len(params)):
+        
+        #number of descent iterations
+        for i in range(0, iterations):
+            total_its = total_its+1
+            new_params[p] = new_params[p] - learning_rate*(hypothesis_equation(x[i], new_params) - y[i])*x[i]
+            plt.plot(x, y,'.',label='training data')
+            plt.plot(x, hypothesis_equation(x, new_params))
+            plt.xlabel('x');plt.ylabel('y')
+            plt.title('LR')
+            plt.savefig('iteration_'+str(total_its))
+            plt.clf()
+
+    return new_params
+```
+Finally all we have to do is to run these function to train our algorithm.
+```python
+data = make_data(100, 1, 1, 20, True, np.random.randint(1, 100))
+x = data[0]
+y = data[1]
+def_params = [0, 0]
+
+hvals = hypothesis_equation(x, def_params)
+
+new_params = stoch_gradient_descent(0.0002, x, y, 100, def_params)
+```
+When we run this we get a set of images we can turn into an animation.
+
+![](/rsr/LR_anim.mp4)
