@@ -15,7 +15,7 @@ This equation represents the sum of all the predicted values $h(x)$ minus the ac
 To optimize the loss function we want to change our theta values so that the loss function can be minimized. This can be done through the use of gradient descent, below we can see a graph of the loss function based on theta one and two. Generally Gradient Descent takes a step in the steepest direction downward each iteration, hopefully ending in the lowest point.
 
 
-![]()
+![](/rsr/GD.png)
  
 We can formally define our gradient descent function as follows:
 $$
