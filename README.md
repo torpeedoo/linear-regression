@@ -1,9 +1,9 @@
 [[Supervised Learning]]
 
 When fist designing a learning algorithm you need to figure out how to represent the hypothesis **h**. In Linear Regression we can represent the hypothesis with the following equation:
-$
-h(x) = \theta_0 + \theta_1x
-$
+
+$h(x) = \theta_0 + \theta_1x$
+
 The goal of our learning algorithm is to minimize our cost function. In this case it can be represented with this equation 
 $$
 J(\theta) = \frac{1}{2} \sum_{i=1}^m (h(x^{(i)}) - y^{(i)})^2
