@@ -1,21 +1,21 @@
-[[Supervised Learning]]
+#Linear Regression
 
 When fist designing a learning algorithm you need to figure out how to represent the hypothesis **h**. In Linear Regression we can represent the hypothesis with the following equation:
 
 $h(x) = \theta_0 + \theta_1x$
 
 The goal of our learning algorithm is to minimize our cost function. In this case it can be represented with this equation 
-$$
-J(\theta) = \frac{1}{2} \sum_{i=1}^m (h(x^{(i)}) - y^{(i)})^2
-$$
+
+$J(\theta) = \frac{1}{2} \sum_{i=1}^m (h(x^{(i)}) - y^{(i)})^2$
+
 This equation represents the sum of all the predicted values $h(x)$ minus the actual values $y$ in the entire dataset. We can then change theta to reduce the output of the function. The half constant is only to make the math easier down the line. 
 
-#### How can we optimize the loss function?: Gradient Descent
+## How can we optimize the cost function?
 
-To optimize the loss function we want to change our theta values so that the loss function can be minimized. This can be done through the use of gradient descent, below we can see a graph of the loss function based on theta one and two. Generally Gradient Descent takes a step in the steepest direction downward each iteration, hopefully ending in the lowest point. **It is possible you can get stuck in a local minimum**.
+To optimize the loss function we want to change our theta values so that the loss function can be minimized. This can be done through the use of gradient descent, below we can see a graph of the loss function based on theta one and two. Generally Gradient Descent takes a step in the steepest direction downward each iteration, hopefully ending in the lowest point.
 
 
-![[Pasted image 20240212172613.png]]
+![]()
  
 We can formally define our gradient descent function as follows:
 $$
